@@ -1,0 +1,276 @@
+.container-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 8fr 4fr;
+    height: 100%;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+
+    i {
+        position: absolute;
+        left: 1%;
+        top: 30%;
+    }
+
+    input {
+        width: 15rem;
+        height: 2.4rem;
+        padding-left: 2rem;
+        border: none;
+        background: rgb(238, 238, 238);
+        border-radius: 24px;
+        font-family: "Montserrat", sans-serif;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+#middle {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #cards-row {
+        h1 {
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding: 0;
+            display: flex;
+            margin-bottom: 2rem;
+            li {
+                list-style: none;
+                margin-right: 5rem;
+                color: gray;
+            }
+        }
+        #cards-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    #events-date-container {
+        .top-row {
+            display: flex;
+            margin-bottom: 3rem;
+            justify-content: space-between;
+
+            button {
+                background: transparent;
+                border-radius: 45px;
+                padding: 0 2rem;
+                border: 1px solid lightgrey;
+                height: 3rem;
+                cursor: pointer;
+            }
+        }
+
+        ul.hori-dates {
+            padding: 0;
+            display: flex;
+            overflow: scroll;
+            width: 50vw;
+
+            li {
+                list-style: none;
+                width: 100px;
+                height: 65px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 40px;
+                justify-content: space-between;
+                transition: background 0.2s;
+
+                p {
+                    &.month {
+                        margin-bottom: 1rem;
+                        color: grey;
+                    }
+
+                    &.day {
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                &:hover {
+                    background: orange;
+                }
+            }
+        }
+    }
+    #bottom {
+        display: flex;
+        justify-content: space-between;
+        button {
+            background: transparent;
+            display: flex;
+            width: min-content;
+            margin-right: 2rem;
+            border-radius: 16px;
+            border: 1px solid gray;
+            padding: 1rem;
+            align-items: center;
+
+            i {
+                font-size: 2.5rem;
+            }
+
+            img {
+                display: flex;
+                align-items: center;
+            }
+
+            .text-container {
+                margin-left: 1rem;
+                text-align: left;
+                width: 17rem;
+
+                h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#right {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #top-nav {
+        display: flex;
+        justify-content: flex-end;
+        .notif {
+            position: relative;
+            margin-right: 3rem;
+
+            i.fa-bell {
+                font-size: 2rem;
+            }
+            i.fa-circle {
+                font-size: 0.7rem;
+                color: red;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                border: 3px solid white;
+                border-radius: 100%;
+            }
+        }
+
+        i.fa-user-circle {
+            font-size: 2.4rem;
+        }
+    }
+    #transactions {
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        img.logo {
+            position: absolute;
+            right: 1rem;
+            width: 6rem;
+            bottom: 3rem;
+        }
+
+        .cc-container {
+            position: relative;
+            margin-top: 2rem;
+
+            .cc-card {
+                background: #f87f76;
+                width: 380px;
+                height: 230px;
+                border-radius: 35px;
+                color: white;
+
+                z-index: 1;
+                position: relative;
+                box-shadow: 0px 14px 34px #d6675fba;
+
+                * {
+                    position: absolute;
+                }
+
+                &.other {
+                    background: #b780de;
+                    box-shadow: 0px 14px 34px #b780de;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 0;
+                }
+            }
+        }
+
+        .cc-brand {
+            right: 1.4rem;
+            bottom: 1.4rem;
+            font-weight: bold;
+        }
+
+        .name {
+            left: 1.4rem;
+            bottom: 1.4rem;
+            font-weight: bold;
+        }
+
+        .card-holder {
+            bottom: 3.3rem;
+            left: 1.3rem;
+            font-size: 0.8rem;
+        }
+
+        .number {
+            left: 1rem;
+            top: 20%;
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+        }
+    }
+    #audience-overview {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                b {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        span.right {
+            display: block;
+            color: #f87f76;
+        }
+
+        .right,
+        .big {
+            text-align: center;
+        }
+
+        h1.big {
+            font-size: 7rem;
+        }
+    }
+}

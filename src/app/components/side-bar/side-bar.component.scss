@@ -1,0 +1,58 @@
+div#side-bar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+i {
+    font-size: 1.4rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+        cursor: pointer;
+        padding: 2rem;
+        list-style: none;
+        position: relative;
+        i {
+            transition: font-weight 0.3s;
+            margin-right: 1rem;
+        }
+
+        &::after {
+            content: "";
+            background: #ff000059;
+            width: 68px;
+            height: 59px;
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: -33%;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            transition: left 0.4s;
+        }
+
+        &:hover {
+            i {
+                font-weight: bold;
+            }
+            &::after {
+                left: 0px;
+            }
+        }
+    }
+}
+
+img {
+    width: 100px;
+}

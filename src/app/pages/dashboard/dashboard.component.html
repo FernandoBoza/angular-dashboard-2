@@ -1,0 +1,111 @@
+<div class="container-dashboard">
+    <section id="left">
+        <app-side-bar></app-side-bar>
+    </section>
+    <section id="middle">
+        <div class="row" id="top">
+            <div class="input-container">
+                <i class="fal fa-search"></i>
+                <input type="text" placeholder="Search ...">
+            </div>
+        </div>
+        <div class="row" id='cards-row'>
+            <h1>Stories</h1>
+            <ul>
+                <li>Recommended</li>
+                <li>Multi Color</li>
+                <li>New Trends</li>
+            </ul>
+            <div id="cards-container">
+                <app-story-card *ngFor="let card of cardDeck" [cardObj]=card></app-story-card>
+            </div>
+        </div>
+        <div class="row" id="events-date-container">
+            <div class="top-row">
+                <h1>Event Dates</h1>
+                <button class="currentMonth">August 12-2021</button>
+            </div>
+
+            <ul class="hori-dates">
+                <li *ngFor='let day of monthObj'>
+                    <p class="month">{{day.dayName.slice(0,2)}}</p>
+                    <p class="day">{{day.dayNum}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="row" id="bottom">
+            <button>
+                <!-- <img src="https://via.placeholder.com/50x70" alt=""> -->
+                <i class="fal fa-chart-network"></i>
+                <div class="text-container">
+                    <h3>Past Events</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ut.</p>
+                </div>
+            </button>
+            <button>
+                <!-- <img src="https://via.placeholder.com/50x70" alt=""> -->
+                <i class="fal fa-award"></i>
+                <div class="text-container">
+                    <h3>Past Events</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ut.</p>
+                </div>
+            </button>
+        </div>
+    </section>
+    <section id="right">
+        <div class="row" id="top-nav">
+            <div class="notif">
+                <i class="fal fa-bell"></i>
+                <i class="fas fa-circle"></i>
+            </div>
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="row" id="transactions">
+            <h1>Transactions</h1>
+            <p>Payments by cards</p>
+            <div class="cc-container">
+                <div class="cc-card">
+                    <p class="number">4562 1122 4595 7852</p>
+                    <p class="card-holder">CARD HOLDER</p>
+                    <p class="name">Ghulam Rasool</p>
+                    <p class="cc-brand">Mastercard</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt=""
+                        class="logo">
+                </div>
+                <div class="cc-card other">
+                    <p class="number">4562 1122 4595 7852</p>
+                    <p class="card-holder">CARD HOLDER</p>
+                    <p class="name">Ghulam Rasool</p>
+                    <p class="cc-brand">Mastercard</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt=""
+                        class="logo">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="audience-overview">
+            <h1 style="margin-bottom: 1rem;">Audience Overview</h1>
+            <p style="color: gray">Business Graph with Stats</p>
+
+            <app-line-chart></app-line-chart>
+            <ul>
+                <li>
+                    <b>125</b>
+                    <span>Rate</span>
+                </li>
+                <li>
+                    <b>14K</b>
+                    <span>Viewers</span>
+                </li>
+                <li>
+                    <b>0/45 sec</b>
+                    <span>Servers Speed</span>
+                </li>
+            </ul>
+
+            <span class="right">Hourly Updates</span>
+            <h1 class="big">90%</h1>
+            <span class="right">Increased Per Hour</span>
+
+        </div>
+    </section>
+</div>
