@@ -13,17 +13,17 @@ export class DashboardComponent implements OnInit {
     {
       title: "Niketa William",
       city: "Paris",
-      img: "../../../assets/Artboard 1 copy 2@2x.jpg"
+      img: "../../../assets/imgOne.jpg"
     },
     {
       title: "Trisha Louis",
       city: "London",
-      img: "../../../assets/Artboard 1 copy@2x.jpg"
+      img: "../../../assets/imgTwo.jpg"
     },
     {
       title: "Ana Tomas",
       city: "Miami",
-      img: "../../../assets/Artboard 1@2x.jpg"
+      img: "../../../assets/imgThree.jpg"
     },
   ];
 
