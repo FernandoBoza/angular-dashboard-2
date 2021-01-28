@@ -13,17 +13,17 @@ export class DashboardComponent implements OnInit {
     {
       title: "Niketa William",
       city: "Paris",
-      img: "../../../assets/imgOne.jpg"
+      img: "https://fernandoboza.github.io/angular-dashboard-2/assets/imgOne.jpg"
     },
     {
       title: "Trisha Louis",
       city: "London",
-      img: "../../../assets/imgTwo.jpg"
+      img: "https://fernandoboza.github.io/angular-dashboard-2/assets/imgTwo.jpg"
     },
     {
       title: "Ana Tomas",
       city: "Miami",
-      img: "../../../assets/imgThree.jpg"
+      img: "https://fernandoboza.github.io/angular-dashboard-2/assets/imgThree.jpg"
     },
   ];
 
